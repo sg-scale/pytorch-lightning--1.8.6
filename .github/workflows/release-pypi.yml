@@ -59,7 +59,7 @@ jobs:
     env:
       TAG: ${{ needs.release-version.outputs.tag }}
     steps:
-    - uses: actions/setup-python@v4
+    - uses: actions/setup-python@v7
       with:
         python-version: 3.8
     - uses: actions/checkout@v3
@@ -97,7 +97,7 @@ jobs:
     timeout-minutes: 90
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
+    - uses: actions/setup-python@v7
       with:
         python-version: 3.8
     - run: pip install gitpython
